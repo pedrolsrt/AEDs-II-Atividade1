@@ -1,0 +1,21 @@
+Código 1 - Teste Grande
+
+Tamanho: 31250000
+Operações: 15625000
+Tempo: 35.9224 ms
+
+Tamanho: 62500000
+Operações: 31250000
+Tempo: 71.1107 ms
+
+Tamanho: 125000000
+Operações: 62500000
+Tempo: 60.5073 ms
+
+Tamanho: 250000000
+Operações: 125000000
+Tempo: 155.9654 ms
+
+Tamanho: 500000000
+Operações: 250000000
+Tempo: 324.7895 ms

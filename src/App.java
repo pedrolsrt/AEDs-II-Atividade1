@@ -134,21 +134,23 @@ public class App {
 
     public static void main(String[] args) {
 
-        int tamanho = TAMANHOS_TESTE_GRANDE[0];
+        for (int tamanho : TAMANHOS_TESTE_GRANDE) {
 
-        int[] vetor = gerarVetor(tamanho);
+            int[] vetor = gerarVetor(tamanho);
 
-        long inicio = System.nanoTime();
+            long inicio = System.nanoTime();
 
-        int resposta = codigo1(vetor);
+            int resposta = codigo1(vetor);
 
-        long fim = System.nanoTime();
+            long fim = System.nanoTime();
 
-        double tempo = (fim - inicio) * NANO_TO_MILLI;
+            double tempo = (fim - inicio) * NANO_TO_MILLI;
 
-        System.out.println("Tamanho do vetor: " + tamanho);
-        System.out.println("Resposta: " + resposta);
-        System.out.println("Operações: " + operacoes);
-        System.out.println("Tempo de execução: " + tempo + " ms");
+            System.out.println("Tamanho do vetor: " + tamanho);
+            System.out.println("Resposta: " + resposta);
+            System.out.println("Operações: " + operacoes);
+            System.out.println("Tempo de execução: " + tempo + " ms");
+            System.out.println();
+        }
     }
 }
