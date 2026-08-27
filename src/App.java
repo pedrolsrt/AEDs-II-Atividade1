@@ -52,9 +52,11 @@ public class App {
      */
     static int codigo1(int[] vetor) {
         int resposta = 0;
+        operacoes = 0;
 
         for (int i = 0; i < vetor.length; i += 2) {
             resposta += vetor[i] % 2;
+            operacoes++;
         }
 
         return resposta;
@@ -146,6 +148,7 @@ public class App {
 
         System.out.println("Tamanho do vetor: " + tamanho);
         System.out.println("Resposta: " + resposta);
+        System.out.println("Operações: " + operacoes);
         System.out.println("Tempo de execução: " + tempo + " ms");
     }
 }
