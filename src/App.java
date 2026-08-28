@@ -123,23 +123,24 @@ public class App {
 
     public static void main(String[] args) {
 
-        System.out.println("Código 3 - Teste Médio");
+        System.out.println("Código 4 - Teste Pequeno");
         System.out.println();
 
-        for (int tamanho : TAMANHOS_TESTE_MEDIO) {
+        for (int tamanho : TAMANHOS_TESTE_PEQUENO) {
 
-            int[] vetor = gerarVetor(tamanho);
+            operacoes = 0;
 
             long inicio = System.nanoTime();
 
-            codigo3(vetor);
+            int resposta = codigo4(tamanho);
 
             long fim = System.nanoTime();
 
             double tempo = (fim - inicio) * NANO_TO_MILLI;
 
-            System.out.println("Tamanho do vetor: " + tamanho);
-            System.out.println("Operações: " + operacoes);
+            System.out.println("Valor de n: " + tamanho);
+            System.out.println("Resposta: " + resposta);
+            System.out.println("Chamadas recursivas: " + operacoes);
             System.out.println("Tempo de execução: " + tempo + " ms");
             System.out.println();
         }
