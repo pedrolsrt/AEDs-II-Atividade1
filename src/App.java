@@ -45,11 +45,6 @@ public class App {
 
     static long operacoes;
 
-    /**
-     * Código de teste 1.
-     * @param vetor Vetor com dados para teste.
-     * @return Resultado do processamento.
-     */
     static int codigo1(int[] vetor) {
         int resposta = 0;
         operacoes = 0;
@@ -62,11 +57,6 @@ public class App {
         return resposta;
     }
 
-    /**
-     * Código de teste 2.
-     * @param vetor Vetor com dados para teste.
-     * @return Resultado do processamento.
-     */
     static int codigo2(int[] vetor) {
         int contador = 0;
         operacoes = 0;
@@ -84,10 +74,6 @@ public class App {
         return contador;
     }
 
-    /**
-     * Código de teste 3.
-     * @param vetor Vetor com dados para teste.
-     */
     static void codigo3(int[] vetor) {
 
         for (int i = 0; i < vetor.length - 1; i++) {
@@ -107,11 +93,6 @@ public class App {
         }
     }
 
-    /**
-     * Código de teste 4 (recursivo).
-     * @param n Ponto inicial do algoritmo.
-     * @return Resultado do processamento.
-     */
     static int codigo4(int n) {
 
         if (n <= 2) {
@@ -121,11 +102,6 @@ public class App {
         }
     }
 
-    /**
-     * Gerador de vetores aleatórios de tamanho pré-definido.
-     * @param tamanho Tamanho do vetor a ser criado.
-     * @return Vetor com dados aleatórios.
-     */
     static int[] gerarVetor(int tamanho) {
 
         int[] vetor = new int[tamanho];
@@ -138,6 +114,9 @@ public class App {
     }
 
     public static void main(String[] args) {
+
+        System.out.println("Código 2 - Teste Grande");
+        System.out.println();
 
         for (int tamanho : TAMANHOS_TESTE_GRANDE) {
 
