@@ -101,6 +101,8 @@ public class App {
 
     static int codigo4(int n) {
 
+        operacoes++;
+
         if (n <= 2) {
             return 1;
         } else {
