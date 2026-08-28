@@ -69,10 +69,15 @@ public class App {
      */
     static int codigo2(int[] vetor) {
         int contador = 0;
+        operacoes = 0;
 
         for (int k = (vetor.length - 1); k > 0; k /= 2) {
+
+            operacoes++;
+
             for (int i = 0; i <= k; i++) {
                 contador++;
+                operacoes++;
             }
         }
 
@@ -140,7 +145,7 @@ public class App {
 
             long inicio = System.nanoTime();
 
-            int resposta = codigo1(vetor);
+            int resposta = codigo2(vetor);
 
             long fim = System.nanoTime();
 
