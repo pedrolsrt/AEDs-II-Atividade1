@@ -1,6 +1,6 @@
 import java.util.Random;
 
-/** 
+/**
  * MIT License
  *
  * Copyright(c) 2024-255 João Caram <caram@pucminas.br>
@@ -61,8 +61,7 @@ public class App {
         int contador = 0;
         operacoes = 0;
 
-        for (int k = (vetor.length - 1); k > 0; k /= 2) {
-
+        for (int k = vetor.length - 1; k > 0; k /= 2) {
             operacoes++;
 
             for (int i = 0; i <= k; i++) {
@@ -75,17 +74,14 @@ public class App {
     }
 
     static void codigo3(int[] vetor) {
-
         operacoes = 0;
 
         for (int i = 0; i < vetor.length - 1; i++) {
-
             operacoes++;
 
             int menor = i;
 
             for (int j = i + 1; j < vetor.length; j++) {
-
                 operacoes++;
 
                 if (vetor[j] < vetor[menor]) {
@@ -100,7 +96,6 @@ public class App {
     }
 
     static int codigo4(int n) {
-
         operacoes++;
 
         if (n <= 2) {
@@ -111,7 +106,6 @@ public class App {
     }
 
     static int[] gerarVetor(int tamanho) {
-
         int[] vetor = new int[tamanho];
 
         for (int i = 0; i < tamanho; i++) {
@@ -122,27 +116,22 @@ public class App {
     }
 
     public static void main(String[] args) {
+        System.out.println("Codigo 2 - Teste Grande");
 
-        System.out.println("Código 4 - Teste Pequeno");
-        System.out.println();
-
-        for (int tamanho : TAMANHOS_TESTE_PEQUENO) {
-
-            operacoes = 0;
+        for (int tamanho : TAMANHOS_TESTE_GRANDE) {
+            int[] vetor = gerarVetor(tamanho);
 
             long inicio = System.nanoTime();
-
-            int resposta = codigo4(tamanho);
-
+            int resposta = codigo2(vetor);
             long fim = System.nanoTime();
 
             double tempo = (fim - inicio) * NANO_TO_MILLI;
 
-            System.out.println("Valor de n: " + tamanho);
-            System.out.println("Resposta: " + resposta);
-            System.out.println("Chamadas recursivas: " + operacoes);
-            System.out.println("Tempo de execução: " + tempo + " ms");
             System.out.println();
+            System.out.println("Tamanho: " + tamanho);
+            System.out.println("Resposta: " + resposta);
+            System.out.println("Operacoes: " + operacoes);
+            System.out.println("Tempo: " + tempo + " ms");
         }
     }
 }
